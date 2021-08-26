@@ -1,11 +1,12 @@
 public class RomanConvertion {
 
     public static String toRoman(int i){
+        String romanNumber = "";
         if (i == 1) {
-            return "I";
+            romanNumber = "I";
         } else if (i == 2) {
-            return "II";
+            romanNumber = "II";
         }
-        return null;
+        return romanNumber;
     }
 }
