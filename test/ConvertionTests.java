@@ -9,5 +9,4 @@ public class ConvertionTests {
         assertEquals("I", RomanConvertion.toRoman(1));
     }
 
-
 }
