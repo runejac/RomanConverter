@@ -6,6 +6,8 @@ public class ConvertionTests {
 
     @Test
     void shouldConvert1ToI() {
-        assertEquals("I", toRoman(1));
+        assertEquals("I", RomanConvertion.toRoman(1));
     }
+
+
 }

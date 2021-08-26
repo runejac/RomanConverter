@@ -1,7 +1,6 @@
 public class RomanConvertion {
 
-    public String toRoman(int i) {
+    public static String toRoman(int i){
         return "I";
     }
-
 }
