@@ -9,4 +9,9 @@ public class ConvertionTests {
         assertEquals("I", RomanConvertion.toRoman(1));
     }
 
+    @Test
+    void shouldConvert2ToII() {
+        assertEquals("II", RomanConvertion.toRoman(2));
+    }
+
 }
