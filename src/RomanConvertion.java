@@ -2,15 +2,20 @@ public class RomanConvertion {
 
     public static String toRoman(int i){
 
-        String romanNumber = "";
+        StringBuilder inRoman = new StringBuilder();
+        int[] numbers = {10, 9, 8, 7, 6, 5, 4, 3, 2, 1};
+        String[] romanNumerals = {"X", "IX", "VIII", "VII", "VI", "V", "IV", "III", "II", "I"};
 
-        String[] romanNumerals = {"I", "II", "III", "IV", "V", "VI", "VII", "VIII", "IX", "X"};
+        if (i <= 100) {
 
-        if (i >= 0 && i <= 10) {
-            for (int j = 0; j < romanNumerals.length; j++) {
-                romanNumber = romanNumerals[i-1];
+            for (int j = 0; j < numbers.length; j++) {
+
+                while (i >= numbers[j]) {
+                    i -= numbers[j];
+                    inRoman.append(romanNumerals[j]);
+                }
             }
         }
-        return romanNumber;
+        return inRoman.toString();
     }
 }
