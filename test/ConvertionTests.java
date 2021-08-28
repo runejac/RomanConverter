@@ -5,11 +5,6 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 public class ConvertionTests {
 
     @Test
-    void shouldConvert0To0() {
-        assertEquals("0", RomanConvertion.toRoman(0));
-    }
-
-    @Test
     void shouldConvert1ToI() {
         assertEquals("I", RomanConvertion.toRoman(1));
     }

@@ -4,11 +4,11 @@ public class RomanConvertion {
 
         String romanNumber = "";
 
-        String[] romanNumerals = {"0", "I", "II", "III", "IV", "V", "VI", "VII", "VIII", "IX", "X"};
+        String[] romanNumerals = {"I", "II", "III", "IV", "V", "VI", "VII", "VIII", "IX", "X"};
 
         if (i >= 0 && i <= 10) {
             for (int j = 0; j < romanNumerals.length; j++) {
-                romanNumber = romanNumerals[i];
+                romanNumber = romanNumerals[i-1];
             }
         }
         return romanNumber;
