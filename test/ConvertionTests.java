@@ -58,4 +58,9 @@ public class ConvertionTests {
     void shouldConvert37ToXXXVII() {
         assertEquals("XXXVII", RomanConvertion.toRoman(37));
     }
+
+    @Test
+    void shouldConvert1999ToMCMXCIX() {
+        assertEquals("MCMXCIX", RomanConvertion.toRoman(1999));
+    }
 }
