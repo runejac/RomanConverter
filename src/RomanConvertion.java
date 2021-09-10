@@ -14,18 +14,13 @@ public class RomanConvertion {
         String[] romanNumerals = {"M", "CM", "D", "CD", "C", "XC", "L", "XL", "X", "IX", "V", "IV", "I"};
 
         if (inputDecimal <= 0) {
-
             System.out.println("The Romans did not have any symbol to represent 0 or negative numbers.");
-
         } else {
-
             for (int j = 0; j < decimalNumbers.length; j++) {
-
                 while (inputDecimal >= decimalNumbers[j]) {
                     inputDecimal -= decimalNumbers[j];
                     inRoman.append(romanNumerals[j]);
                 }
-
             }
         }
         return inRoman.toString();
