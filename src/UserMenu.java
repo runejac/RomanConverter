@@ -1,10 +1,11 @@
+import java.util.InputMismatchException;
 import java.util.Scanner;
 
 public class UserMenu {
 
     final Scanner menuScanner = new Scanner(System.in);
 
-    public int getOption() {
+    public int getOption() throws InputMismatchException {
         System.out.print("Option: ");
         int option = menuScanner.nextInt();
         menuScanner.nextLine();
