@@ -9,18 +9,16 @@ public class Main {
         UserMenu userMenu = new UserMenu();
 
             do {
-
                 userMenu.displayMenu();
                 int option = userMenu.getOption();
 
                 if (option == 1) {
                     runRomanConverter();
-
-                } else if (option == 0) {
-
+                } else if (option < 0 || option > 1) {
+                    System.out.println("ERROR! _ONLY_ a range from 0-1 are allowed.");
+                } else {
                     decimalScanner.close();
                     userMenu.menuScanner.close();
-
                     break;
                 }
             } while (true);
@@ -35,8 +33,8 @@ public class Main {
             String romanLiteral = RomanConvertion.toRoman(inputInt);
             System.out.printf("The number %d is %s in Roman numerals", inputInt, romanLiteral);
             System.out.println();
-        } catch (InputMismatchException i) {
-            System.out.println("Need a number, letters are not allowed.");
+        } catch (InputMismatchException exception) {
+            System.out.println("ERROR! _ONLY_ digits are allowed.");
             decimalScanner.nextLine();
         }
     }

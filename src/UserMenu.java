@@ -3,13 +3,19 @@ import java.util.Scanner;
 
 public class UserMenu {
 
-    final Scanner menuScanner = new Scanner(System.in);
+    public final Scanner menuScanner = new Scanner(System.in);
 
     public int getOption() throws InputMismatchException {
-        System.out.print("Option: ");
-        int option = menuScanner.nextInt();
-        menuScanner.nextLine();
-        return option;
+        try {
+            System.out.print("Option: ");
+            int option = menuScanner.nextInt();
+            menuScanner.nextLine();
+            return option;
+        } catch (InputMismatchException exception) {
+            System.out.println("ERROR! _ONLY_ digits are allowed, read the menu options.");
+            menuScanner.nextLine();
+        }
+        return getOption();
     }
 
     public void displayMenu() {
